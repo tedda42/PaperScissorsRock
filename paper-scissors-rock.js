@@ -22,8 +22,7 @@ var compare = function (choice1, choice2) {
     } else if (choice1 === "paper") {
         if (choice2 === "rock") {
             return "paper wins!"
-        }
-        else {
+        } else {
             return "scissors wins!"
         }
     } else if (choice1 === "scissors") {
@@ -33,7 +32,7 @@ var compare = function (choice1, choice2) {
             return "scissors wins!"
         }
     } else {
-        return "Invalid choice '" + choice1 +"'";
+        return "Invalid choice '" + choice1 + "'";
     }
 };
 var result = compare(userChoice, computerChoice);
