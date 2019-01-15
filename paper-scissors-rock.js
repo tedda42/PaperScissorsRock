@@ -1,5 +1,10 @@
 var userChoice = prompt("Do you choose rock, paper or scissors?");
 var computerChoice = Math.random();
+
+var resultTextBox = document.getElementById('result');
+var computerResult = document.getElementById('computer');  
+var userResult = document.getElementById('user');  
+
 if (computerChoice < 0.34) {
     computerChoice = "rock";
 } else if (computerChoice <= 0.67) {
@@ -36,4 +41,8 @@ var compare = function (choice1, choice2) {
     }
 };
 var result = compare(userChoice, computerChoice);
-console.log(result);
+
+// Displaying result on web page
+resultTextBox.innerHTML += result;
+userResult.innerHTML = userChoice;
+computerResult.innerHTML = computerChoice;
